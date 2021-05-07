@@ -11,6 +11,7 @@ if (randomNumber == 1) {
 }
 
 console.log(computerMove);
+printMessage(computerMove);
 
 let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce");
 
@@ -27,15 +28,16 @@ if (playerInput == "1") {
 }
 
 console.log(playerMove);
+printMessage(playerMove);
 
 if (computerMove == "kamień" && playerMove == "papier") {
-  console.log("Ty wygrywasz!");
+  printMessage("Ty wygrywasz!");
 } else if (computerMove == "papier" && playerMove == "nożyce") {
-  console.log("Ty wygrywsz!");
+  printMessage("Ty wygrywsz!");
 } else if (computerMove == "nożyce" && playerMove == "kamień") {
-  console.log("Ty wygrywasz!");
+  printMessage("Ty wygrywasz!");
 } else if (computerMove == playerMove) {
-  console.log("Remis");
+  printMessage("Remis");
 } else {
-  console.log("Przegrałeś!");
+  printMessage("Przegrałeś!");
 }
