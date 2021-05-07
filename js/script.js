@@ -1,4 +1,4 @@
-let randomNumber = Math.random() * 3 + 1;
+let randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log("Wylosowana liczba to:" + randomNumber);
 
 let computerMove = "Nieznany ruch";
@@ -12,7 +12,7 @@ if (randomNumber == 1) {
 
 let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce");
 
-console.log("Gracz wybrał" + playerInput);
+console.log("Gracz wybrał " + playerInput);
 
 let playerMove = "Nieznany ruch";
 
