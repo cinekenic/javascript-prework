@@ -1,3 +1,6 @@
+let gameScore = document.getElementById("result");
+let score = 0;
+console.log(score);
 function playGame(playerInput) {
   clearMessages();
   function getMoveName(argMoveId) {
@@ -22,17 +25,25 @@ function playGame(playerInput) {
     console.log(argPlayerMove);
     argComputerMove = computerMove;
     argPlayerMove = playerMove;
-    if (computerMove == "kamień" && playerMove == "papier") {
+    if (computerMove == "Kamień" && playerMove == "Papier") {
       printMessage("Ty wygrywasz!");
-    } else if (computerMove == "papier" && playerMove == "nożyce") {
+      score += 1;
+      // gameScore.textContent = score;
+    } else if (computerMove == "Papier" && playerMove == "Nożyce") {
       printMessage("Ty wygrywsz!");
-    } else if (computerMove == "nożyce" && playerMove == "kamień") {
+      score += 1;
+      // gameScore.textContent = score;
+    } else if (computerMove == "Nożyce" && playerMove == "Kamień") {
       printMessage("Ty wygrywasz!");
+      score += 1;
+      // gameScore.textContent = score;
     } else if (computerMove == playerMove) {
       printMessage("Remis");
     } else {
-      printMessage("Przegrałeś!");
+      printMessage("Przegrałeś!!!!!!!");
+      score--;
     }
+    gameScore.textContent = score;
   }
 
   console.log(computerMove);
