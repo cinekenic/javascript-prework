@@ -21,10 +21,9 @@ function playGame(playerInput) {
 
   let computerMove = getMoveName(randomNumber);
 
-  function displayResult(argComputerMove, argPlayerMove) {
+  function displayResult(computerMove, playerMove) {
     console.log(argPlayerMove);
-    argComputerMove = computerMove;
-    argPlayerMove = playerMove;
+
     if (computerMove == "Kamień" && playerMove == "Papier") {
       printMessage("Ty wygrywasz!");
       score += 1;
